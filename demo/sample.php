@@ -3,10 +3,11 @@
  * Copyright (C) Alibaba Cloud Computing
  * All rights reserved
  */
+require_once realpath(dirname(__FILE__) . '/autoload.php');
 
-require_once realpath(dirname(__FILE__) . '/../Aliyun/ACM/Autoload.php');;
 
-$client = new Aliyun_ACM_Client('acm.aliyun.com','8080');
+
+$client = new \Dleno\AliYunAcm\ACMClient('acm.aliyun.com','8080');
 $resp = $client->getServerList();
 $client->refreshServerList();
 
@@ -28,7 +29,7 @@ var_dump(array_values($client->getServerList())[0]);
 
 echo "hello world";
 
-echo strval(Aliyun_ACM_Util::isValid('data_id'));
+echo strval(\Dleno\AliYunAcm\Util::isValid('data_id'));
 
-echo strval(Aliyun_ACM_Util::isValid('data*id'));
+echo strval(\Dleno\AliYunAcm\Util::isValid('data*id'));
 
