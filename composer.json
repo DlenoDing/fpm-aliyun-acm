@@ -1,0 +1,35 @@
+{
+    "name": "dleno/fpm-aliyun-acm",
+    "description": "An aliyun acm adapter for FPM.",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "config",
+        "configuration",
+        "aliyun",
+        "acm"
+    ],
+    "homepage": "https://acm.console.aliyun.com/",
+    "support": {
+        "docs": "https://help.aliyun.com/product/59604.html",
+        "issues": "https://github.com/DlenoDing/fpm-aliyun-acm/issues",
+        "pull-request": "https://github.com/DlenoDing/fpm-aliyun-acm/pulls",
+        "source": "https://github.com/DlenoDing/fpm-aliyun-acm"
+    },
+    "require": {
+        "php": ">=7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dleno\\AliYunAcm\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": [],
+    "bin": [],
+    "scripts": {
+        "cs-fix": "php-cs-fixer fix $1"
+    }
+}
