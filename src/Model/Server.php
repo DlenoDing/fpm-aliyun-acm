@@ -1,10 +1,12 @@
 <?php
+
 namespace Dleno\AliYunAcm\Model;
 /**
  * Class Aliyun_ACM_Model_Server
  * the instance of ACM server
  */
-class Server{
+class Server
+{
 
     public $url;
 

@@ -1,4 +1,5 @@
 <?php
+
 namespace Dleno\AliYunAcm;
 
 /**
@@ -46,8 +47,7 @@ class ResponseCore
      */
     public function isOK($codes = array(200, 201, 204, 206))
     {
-        if (is_array($codes))
-        {
+        if (is_array($codes)) {
             return in_array($this->status, $codes);
         }
 

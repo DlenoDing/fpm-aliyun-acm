@@ -6,6 +6,7 @@
 
 namespace Dleno\AliYunAcm;
 
+
 class RequestCore
 {
     /**
@@ -86,12 +87,12 @@ class RequestCore
     /**
      * The default class to use for HTTP Requests (defaults to <RequestCore>).
      */
-    public $requestClass = 'RequestCore';
+    public $requestClass = '\\Dleno\\AliYunAcm\\RequestCore';
 
     /**
      * The default class to use for HTTP Responses (defaults to <ResponseCore>).
      */
-    public $responseClass = 'ResponseCore';
+    public $responseClass = '\\Dleno\\AliYunAcm\\ResponseCore';
 
     /**
      * Default useragent string to use.

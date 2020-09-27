@@ -11,19 +11,19 @@ $client = new \Dleno\AliYunAcm\ACMClient('acm.aliyun.com','8080');
 $resp = $client->getServerList();
 $client->refreshServerList();
 
-$client->setNameSpace('namespace');
-$client->setAccessKey('accesskey');
-$client->setSecretKey('secretkey');
-$client->setAppName("appname");
+$client->setNameSpace('NameSpace');
+$client->setAccessKey('AccessKey');
+$client->setSecretKey('SecretKey');
+$client->setAppName("AppName");
 
 echo $client->getConfig('test.test',null)."\n";
 
 $client->publishConfig('test.test',null,"{\"test\":\"asdfasdfasdf\"}")."\n";
 
 $ts = round(microtime(true) * 1000);
-$client->publishConfig('test'.$ts,null,"{\"test\":\"asdfasdfasdf\"}")."\n";
+$client->publishConfig('test.rand',null,"{\"test\":\"{$ts}\"}")."\n";
 
-$client->removeConfig('test.test',null);
+//$client->removeConfig('test.test',null);
 
 var_dump(array_values($client->getServerList())[0]);
 

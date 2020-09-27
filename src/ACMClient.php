@@ -137,7 +137,9 @@ class ACMClient
 
         $request->sendRequest(true);
         if ($request->getResponseCode() != '200') {
-            print '[GETCONFIG] got invalid http response: (' . $acmHost . '.';
+            //print '[GETCONFIG] got invalid http response: (' . $acmHost . '.';
+            //throw new Exception\ACMException ('[GETCONFIG] got invalid http response: (' . $acmHost . '.');
+            return '';
         }
         $rawData = $request->getResponseBody();
         return $rawData;

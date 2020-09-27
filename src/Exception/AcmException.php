@@ -1,4 +1,5 @@
 <?php
+
 namespace Dleno\AliYunAcm\Exception;
 
 class AcmException extends \RuntimeException
@@ -31,7 +32,8 @@ class AcmException extends \RuntimeException
      *
      * @return string
      */
-    public function __toString() {
+    public function __toString()
+    {
         return "AcmException: \n{\n    ErrorMessage: $this->message\n    RequestId: $this->requestId\n}\n";
     }
 
@@ -40,7 +42,8 @@ class AcmException extends \RuntimeException
      *
      * @return string
      */
-    public function getErrorMessage() {
+    public function getErrorMessage()
+    {
         return $this->message;
     }
 
@@ -49,7 +52,8 @@ class AcmException extends \RuntimeException
      *
      * @return string
      */
-    public function getRequestId() {
+    public function getRequestId()
+    {
         return $this->requestId;
     }
 }
